@@ -2,13 +2,14 @@ package com.example.springbootmongodb;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
+import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.stereotype.Repository;
-import sun.awt.SunHints;
+
 
 import java.util.List;
 
 @Repository
-public interface HotelRepository extends MongoRepository<Hotel,String> {
+public interface HotelRepository extends MongoRepository<Hotel,String>, QuerydslPredicateExecutor<Hotel> {
     Hotel findHotelById(String id);
     List<Hotel> findByPricePerNightLessThan(int maxPrice);
 

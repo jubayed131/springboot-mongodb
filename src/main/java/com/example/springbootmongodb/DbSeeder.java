@@ -2,7 +2,7 @@ package com.example.springbootmongodb;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
+
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,7 +23,7 @@ public class DbSeeder implements CommandLineRunner {
         Hotel marriot=new Hotel(
                 "Marriot",
                 130,
-                new Address("Paris","France"),
+                new Address("France","Paris"),
                 Arrays.asList(
                    new Review("John",8,false),
                     new Review("Mike",7,true)
@@ -33,7 +33,7 @@ public class DbSeeder implements CommandLineRunner {
         Hotel ibis=new Hotel(
                 "Ibis",
                 90,
-                new Address("Bucharest","Romania"),
+                new Address("Romania","Bucharest"),
                 Arrays.asList(
                         new Review("Jill",9,true)
 
@@ -43,7 +43,7 @@ public class DbSeeder implements CommandLineRunner {
         Hotel sofitel=new Hotel(
                 "Sofitel",
                 200,
-                new Address("Rome","Italy"),
+                new Address("Italy","Rome"),
                 new ArrayList<>()
         );
         // drop all hotels
